@@ -167,6 +167,21 @@ font-family: 'Raleway';
     }
     
 @media (max-width: 768px) {
+
+  #about-me {
+    margin: 0 1rem; /* Reduce the left and right margins */
+  }
+
+  .personal-introduction p,
+  .professional-summary p,
+  .timeline ul {
+    font-size: 0.9rem; /* Adjust the font size for readability */
+  }
+
+  .list-element {
+    font-size: 0.8rem; /* Adjust the font size for the list elements */
+  }
+
   .parent {
     display: grid;
     grid-template-columns: 1fr;
