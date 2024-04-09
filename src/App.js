@@ -1,10 +1,11 @@
 import './App.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import React from 'react';
-import { Navbar } from './Navbar'
-import { About } from './About'
-import { Projects } from './Projects';
-import { Contact } from './Contact';
-import { Home } from './Home';
+import { Navbar } from './pages/Navbar'
+import { About } from './pages/About'
+import { Projects } from './pages/Projects';
+import { Contact } from './pages/Contact';
+import { Home } from './pages/Home';
 
 class App extends React.Component {
 constructor(props){
