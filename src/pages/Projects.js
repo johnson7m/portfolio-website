@@ -89,8 +89,8 @@ export class Projects extends React.Component {
                         </a>
                     </div>
                     <div className="div12 grid-item">
-                        <p className='project-header'>Portfolio Page (the one you're currently browsing)</p>
-                        <a href="https://github.com/johnson7m/portfolio-website" target="_blank" rel="noreferrer">
+                        <p className='project-header'>Mock Business Page (React-Bootstrap)</p>
+                        <a href="https://coalition-technologies-skills-test.netlify.app/#section1" target="_blank" rel="noreferrer">
                             <img className='project-image' src={project12}></img>
                         </a>
                     </div>
