@@ -1,32 +1,55 @@
 import './App.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Ensure useLocation and Router are imported
 import React from 'react';
-import { Navbar } from './pages/Navbar'
-import { About } from './pages/About'
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { NavigationBar } from './pages/Navbar';
+import { About } from './pages/About';
 import { Projects } from './pages/Projects';
 import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
+import { Footer } from './pages/Footer';
+import ProjectDetails from './projects/ProjectDetails';
+import ProjectApp from './projects/ProjectApp';
 
-class App extends React.Component {
-constructor(props){
-  super(props)
-  
-}
+const AnimatedRoutes = () => {
+  const location = useLocation(); // Get location from useLocation hook inside the Router
 
-
-render() {
   return (
-    <div id="container">
-      <Navbar></Navbar>
-      <div className="flex-parent">
-        <Home></Home>
-        <About></About>
-        <Projects></Projects>
-        <Contact></Contact>
+    <TransitionGroup id="main-content">
+      <CSSTransition key={location.pathname} timeout={300} classNames="fade">
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path='/projects/:projectId' element={<ProjectApp />}/>
+          <Route path="/projects/:projectId/details" element={<ProjectDetails/>}/>
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <div id="container">
+        <NavigationBar />
+        <AnimatedRoutes/>
+        <Footer />
       </div>
-    </div>
-  )
-}
-}
+    </Router>
+  );
+};
+
+
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
 
 export default App;

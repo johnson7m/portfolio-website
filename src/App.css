@@ -1,38 +1,265 @@
+/* Button Hover Effect */
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+#home-section {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+
+/* Override Bootstrap button styles globally */
+.btn-primary {
+  background-color: black !important;
+  border-color: black !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #333 !important; /* Darker shade for hover and active states */
+  border-color: #333 !important;
+}
+
+/* Make the timeline sticky as user scrolls */
+.chrono-icons {
+  position: sticky;
+  top: 100px; /* Adjust based on your header height */
+  z-index: 1;
+}
+
+.about-section .chrono {
+  padding: 20px 0;
+  background-color: #181a1b;
+}
+
+
+/* About Section Styling */
+.about-section {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  color: var(--font-color);
+  text-align: center;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 20px;
+}
+
+.personal-introduction {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chrono {
+  margin-top: 40px;
+}
+
+.chrono .chrono-icons {
+  color: var(--font-color);
+}
+
+.chrono .chrono-card {
+  background-color: #333;
+}
+.section-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.hero button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+
+#main-content {
+  padding-top: 80px; /* Make sure it clears the fixed navbar */
+}
+
+/* Page fade-in and fade-out transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+/* Card Hover Effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Contact Page Styling */
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: var(--background-color);
+
+}
+
+.contact-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--font-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--font-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.788);
+}
+
+.contact-form button {
+  background-color: white !important;
+  color: #212529;
+  border: #ccc 1px solid !important;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--font-color);
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+}
+
+
+/* Footer */
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+/* General Styling */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px;
+  }
+
+  .project-container {
+    flex-direction: column;
+  }
+
+  .project-details {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .hero-title {
+    font-size: 2rem; /* Reduce font size for mobile */
+    text-align: left; /* Align to the left */
+    padding: 0 15px; /* Add padding for better spacing */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem; /* Reduce font size for mobile */
+    text-align: left; /* Align to the left */
+    padding: 0 15px; /* Add padding for better spacing */
+    max-width: 90%; /* Ensure text doesn't stretch too wide */
+    line-height: 1.5; /* Adjust line height for better readability */
+  }
+
+  /* About Section - Mobile View */
+  .section-header {
+    font-size: 2rem; /* Reduce font size for mobile */
+    text-align: left; /* Align to the left */
+    padding: 0 15px; /* Add padding for better spacing */
+  }
+
+  .personal-introduction {
+    font-size: 1rem; /* Reduce font size for mobile */
+    text-align: left; /* Align to the left */
+    padding: 0 15px; /* Add padding for better spacing */
+    max-width: 90%; /* Ensure text doesn't stretch too wide */
+    line-height: 1.5; /* Adjust line height for better readability */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 992px) {
+  .navbar {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
+
