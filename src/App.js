@@ -10,6 +10,7 @@ import { Home } from './pages/Home';
 import { Footer } from './pages/Footer';
 import ProjectDetails from './projects/ProjectDetails';
 import ProjectApp from './projects/ProjectApp';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AnimatedRoutes = () => {
   const location = useLocation(); // Get location from useLocation hook inside the Router
