@@ -30,7 +30,7 @@ export const Projects = () => {
 
 
     const projectList = [
-      { title: "JavaScript Calculator", description: "A simple calculator built with JavaScript", link: "https://main.d14qa50mipb5gx.amplifyapp.com/", image: project1 },
+      { title: "JavaScript Calculator", description: "A simple calculator built with JavaScript", link: "https://main--aether-javascript-calculator.netlify.app/", image: project1 },
       { title: "Markdown Previewer", description: "A real-time markdown preview app", link: "https://main.d255j9osh5go8e.amplifyapp.com/", image: project4},
       { title: "Random Quote Machine", description: "Generates random quotes using an API", link: "https://main--aether-quote-machine.netlify.app/", image: project7 },
       { title: "25 + 5 Clock", description: "Workflow timer", link: "https://main.d22e538so853bt.amplifyapp.com/", image: project10 },
